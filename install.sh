@@ -28,12 +28,18 @@ mkdir -p "$BACKUP_DIR"
 [ -d "$HOME/.config/hypr" ] && cp -a "$HOME/.config/hypr" "$BACKUP_DIR/hypr" || true
 [ -d "$HOME/.config/swaync" ] && cp -a "$HOME/.config/swaync" "$BACKUP_DIR/swaync" || true
 
-echo "[5/7] Deploying Hyprland, SwayNC, and PipeWire configs..."
+echo "[5/7] Deploying Hyprland, SwayNC, Terminal, GTK, MacShell prefs, and PipeWire configs..."
 mkdir -p "$HOME/.config/hypr/custom" "$HOME/.config/swaync" "$HOME/.config/pipewire/pipewire.conf.d"
 cp "$REPO_DIR/hypr/hyprland.lua" "$REPO_DIR/hypr/hypridle.conf" "$REPO_DIR/hypr/hyprlock.conf" "$HOME/.config/hypr/"
+cp -a "$REPO_DIR/hypr/hyprland" "$REPO_DIR/hypr/scripts" "$HOME/.config/hypr/"
 cp -a "$REPO_DIR/hypr/custom/"* "$HOME/.config/hypr/custom/"
-chmod +x "$HOME/.config/hypr/custom/scripts/"*.sh
+chmod +x "$HOME/.config/hypr/custom/scripts/"*.sh "$HOME/.config/hypr/hyprland/scripts/"*.sh 2>/dev/null || true
 cp -a "$REPO_DIR/swaync/"* "$HOME/.config/swaync/"
+for dir in kitty fish zshrc.d gtk-3.0 gtk-4.0 macbar macdock; do
+    mkdir -p "$HOME/.config/$dir"
+    cp -a "$REPO_DIR/$dir/"* "$HOME/.config/$dir/"
+done
+sed -i "s|/home/hwangky0|$HOME|g" "$HOME/.config/macbar/settings.json" "$HOME/.config/macdock/settings.json" 2>/dev/null || true
 cp "$REPO_DIR/pipewire/10-hires-rates.conf" "$HOME/.config/pipewire/pipewire.conf.d/"
 systemctl --user restart pipewire pipewire-pulse wireplumber || true
 

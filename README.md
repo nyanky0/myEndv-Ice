@@ -22,13 +22,16 @@ Konfigurasi pribadi EndeavourOS + Hyprland (Lua config 0.55+) dengan dukungan mu
 
 ### Isi Repositori
 
-- `hypr/`: `hyprland.lua`, `hypridle.conf`, `hyprlock.conf`, dan folder `custom/` berisi aturan jendela, autostart, keybind, serta skrip router di `custom/scripts/`.
+- `hypr/`: `hyprland.lua`, `hypridle.conf`, `hyprlock.conf`, modul bawaan `hyprland/` & `scripts/`, serta folder `custom/` berisi aturan jendela, autostart, keybind, dan skrip router di `custom/scripts/`.
+- `kitty/`, `fish/`, `zshrc.d/`: konfigurasi terminal dan shell CLI.
+- `gtk-3.0/`, `gtk-4.0/`: tema dan pengaturan tampilan aplikasi GTK.
+- `macbar/`, `macdock/`: preferensi lokal untuk shell `Liquid` (`MacShell`, termasuk `windecor.json`).
 - `swaync/`: tema dark frosted glass untuk notification center (`config.json`, `style.css`, `colors.css`).
 - `pipewire/`: `10-hires-rates.conf` untuk membuka sample rate `44100` sampai `192000` Hz.
 - `patches/MacShell/`: modifikasi `shell.qml` dan `MacBar.qml` (mengaktifkan `WindowBar` bawaan serta IPC `windecor` dan `appearance`).
 - `pkglist.txt` & `flatpak.txt`: daftar paket `pacman`/`yay` dan aplikasi Flathub (`--user`).
 
-Folder besar seperti `end4-pC`, `sekaipop`, `MacShell`, dan binary `.so` plugin Hyprland tidak disimpan di sini. Skrip `install.sh` mengunduh shell dari repositori aslinya saat pemasangan.
+Data pribadi dan biner besar tidak disertakan: profil browser, data aplikasi Flatpak (`~/.var/app/`), kredensial/API key (`~/.gemini/`), file `monitors.lua`/`workspaces.lua`, binary `.so` plugin Hyprland, serta folder mentah `end4-pC`/`sekaipop`/`MacShell` (`install.sh` mengunduh shell dan paketnya otomatis saat pemasangan).
 
 ### Cara Pasang
 
@@ -74,13 +77,16 @@ Personal EndeavourOS + Hyprland (Lua config 0.55+) setup with multi-shell switch
 
 ### Repository Contents
 
-- `hypr/`: `hyprland.lua`, `hypridle.conf`, `hyprlock.conf`, and `custom/` with window rules, autostart commands, keybinds, and router scripts under `custom/scripts/`.
+- `hypr/`: `hyprland.lua`, `hypridle.conf`, `hyprlock.conf`, default `hyprland/` & `scripts/` modules, and `custom/` with window rules, autostart commands, keybinds, and router scripts under `custom/scripts/`.
+- `kitty/`, `fish/`, `zshrc.d/`: terminal and CLI shell configurations.
+- `gtk-3.0/`, `gtk-4.0/`: GTK theme and appearance settings.
+- `macbar/`, `macdock/`: local preferences for the `Liquid` (`MacShell`) shell, including `windecor.json`.
 - `swaync/`: dark frosted glass theme for the notification center (`config.json`, `style.css`, `colors.css`).
 - `pipewire/`: `10-hires-rates.conf` enabling sample rates from `44100` up to `192000` Hz.
 - `patches/MacShell/`: modified `shell.qml` and `MacBar.qml` enabling built-in `WindowBar` controls plus `windecor` and `appearance` IPC handlers.
 - `pkglist.txt` & `flatpak.txt`: `pacman`/AUR package list and Flathub (`--user`) applications.
 
-Large upstream directories (`end4-pC`, `sekaipop`, `MacShell`) and compiled Hyprland `.so` plugins are excluded from Git. `install.sh` pulls the upstream shells during installation.
+Personal data and large binaries are excluded: browser profiles, Flatpak app data (`~/.var/app/`), API keys/credentials (`~/.gemini/`), `monitors.lua`/`workspaces.lua`, compiled Hyprland `.so` plugins, and upstream `end4-pC`/`sekaipop`/`MacShell` directories (`install.sh` fetches upstream shells and packages during setup).
 
 ### Installation
 
