@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="ag" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6b6b6b"/>
+      <stop offset="100%" style="stop-color:#1a1a1a"/>
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="48" fill="url(#ag)"/>
+  <!-- Apple logo path (simplified) -->
+  <path d="M62,25 C62,25 65,18 60,15 C60,15 54,15 50,22 C46,15 40,15 40,15 C35,18 38,25 38,25 C30,30 26,40 26,52 C26,68 36,80 46,80 C49,80 51,78 54,78 C57,78 59,80 62,80 C72,80 74,65 74,52 C74,40 70,30 62,25 Z" fill="white" opacity="0.95"/>
+  <!-- Apple leaf -->
+  <path d="M50,22 C50,22 52,14 58,12" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.95"/>
+</svg>

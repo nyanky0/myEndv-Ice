@@ -1,0 +1,33 @@
+/* SwayNC Dark Frosted Glass Colors */
+@define-color primary #89b4fa;
+@define-color on_primary #11111b;
+@define-color primary_container #2b354f;
+@define-color on_primary_container #cdd6f4;
+
+@define-color secondary #a6adc8;
+@define-color on_secondary #11111b;
+@define-color secondary_container #252736;
+@define-color on_secondary_container #cdd6f4;
+
+@define-color surface #16161e;
+@define-color on_surface #ebedf5;
+@define-color surface_container #1e1e2a;
+@define-color surface_container_low #191924;
+@define-color surface_container_high #262636;
+@define-color surface_container_highest #313244;
+@define-color surface_container_lowest #11111b;
+
+@define-color outline #585b70;
+@define-color outline_variant #313244;
+
+@define-color error #f38ba8;
+@define-color on_error #11111b;
+@define-color error_container #4a202c;
+@define-color on_error_container #f38ba8;
+
+/* Semi-transparent RGBA equivalents for frosted glass */
+@define-color cc_bg rgba(20, 20, 28, 0.88);
+@define-color notif_bg rgba(28, 28, 38, 0.88);
+@define-color notif_border rgba(255, 255, 255, 0.14);
+@define-color widget_bg rgba(38, 38, 52, 0.78);
+@define-color widget_hover rgba(54, 54, 72, 0.90);

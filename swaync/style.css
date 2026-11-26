@@ -1,0 +1,216 @@
+@import url("colors.css");
+
+* {
+  font-family: "SF Pro Display", "Inter", "Cantarell", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Floating Notification Window */
+.floating-notifications {
+  background: transparent;
+}
+
+.floating-notifications .notification {
+  background: @notif_bg;
+  border: 1px solid @notif_border;
+  border-radius: 18px;
+  margin: 8px 12px;
+  padding: 12px 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.notification-content {
+  margin: 6px;
+}
+
+.notification-default-action {
+  padding: 4px;
+  border-radius: 14px;
+}
+
+.notification-default-action:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.summary {
+  font-size: 14px;
+  font-weight: 700;
+  color: @primary;
+}
+
+.time {
+  font-size: 11px;
+  color: @secondary;
+  margin-right: 12px;
+}
+
+.body {
+  font-size: 12px;
+  color: @on_surface;
+  margin-top: 4px;
+}
+
+.image {
+  border-radius: 12px;
+  margin-right: 12px;
+}
+
+.app-icon {
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+/* Notification Action Buttons */
+.notification-action {
+  background: @widget_bg;
+  border: 1px solid @notif_border;
+  border-radius: 12px;
+  color: @on_surface;
+  padding: 6px 14px;
+  margin: 4px 6px;
+}
+
+.notification-action:hover {
+  background: @primary;
+  color: @on_primary;
+}
+
+/* Control Center Panel */
+.control-center {
+  background: @cc_bg;
+  border: 1px solid @notif_border;
+  border-radius: 22px;
+  padding: 16px;
+  margin: 12px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
+}
+
+.control-center .notification-row .notification {
+  background: @widget_bg;
+  border: 1px solid @notif_border;
+  border-radius: 16px;
+  margin: 6px 4px;
+  padding: 10px 14px;
+}
+
+.control-center .notification-row .notification:hover {
+  background: @widget_hover;
+  border-color: @primary;
+}
+
+/* Widget: Title */
+.widget-title {
+  color: @on_surface;
+  margin: 6px 8px 12px 8px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.widget-title > button {
+  background: @primary_container;
+  color: @on_primary_container;
+  border: 1px solid @notif_border;
+  border-radius: 12px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.widget-title > button:hover {
+  background: @error_container;
+  border-color: @error;
+  color: @on_error_container;
+}
+
+/* Widget: DND (Do Not Disturb) */
+.widget-dnd {
+  background: @widget_bg;
+  border: 1px solid @notif_border;
+  border-radius: 16px;
+  padding: 10px 16px;
+  margin: 4px 6px 10px 6px;
+  color: @on_surface;
+  font-weight: 600;
+}
+
+.widget-dnd > switch {
+  border-radius: 14px;
+  background: @surface_container_highest;
+}
+
+.widget-dnd > switch:checked {
+  background: @primary;
+}
+
+.widget-dnd > switch slider {
+  background: @on_primary;
+  border-radius: 12px;
+}
+
+/* Widget: MPRIS Media Player */
+.widget-mpris {
+  background: @widget_bg;
+  border: 1px solid @notif_border;
+  border-radius: 18px;
+  padding: 12px;
+  margin: 4px 6px 10px 6px;
+}
+
+.widget-mpris-player {
+  padding: 6px;
+}
+
+.widget-mpris-album-art {
+  border-radius: 14px;
+  margin-right: 12px;
+}
+
+.widget-mpris-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: @on_surface;
+}
+
+.widget-mpris-subtitle {
+  font-size: 12px;
+  color: @secondary;
+}
+
+/* Widgets: Sliders (Volume & Backlight) */
+.widget-volume,
+.widget-backlight {
+  background: @widget_bg;
+  border: 1px solid @notif_border;
+  border-radius: 16px;
+  padding: 8px 16px;
+  margin: 4px 6px;
+  color: @on_surface;
+}
+
+.widget-volume label,
+.widget-backlight label {
+  font-size: 15px;
+  color: @primary;
+  margin-right: 10px;
+}
+
+scale trough {
+  background: @surface_container_highest;
+  border-radius: 10px;
+  min-height: 8px;
+}
+
+scale highlight {
+  background: @primary;
+  border-radius: 10px;
+  min-height: 8px;
+}
+
+scale slider {
+  background: @on_primary;
+  border-radius: 50%;
+  min-width: 14px;
+  min-height: 14px;
+}

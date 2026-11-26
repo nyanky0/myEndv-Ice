@@ -1,0 +1,1 @@
+hl.env("qsConfig", "MacShell")
