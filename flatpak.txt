@@ -3,3 +3,4 @@ com.github.KRTirtho.Spotube
 com.github.taiko2k.tauonmb
 org.kde.kate
 org.remmina.Remmina
+app.legcord.Legcord
